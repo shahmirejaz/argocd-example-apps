@@ -7,7 +7,7 @@ metadata:
     chart: {{ template "helm-guestbook.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
-    testKey: "test-123"
+    testKey: "test-123-new"
 spec:
   replicas: {{ .Values.replicaCount }}
   revisionHistoryLimit: 3
