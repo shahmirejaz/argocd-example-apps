@@ -8,5 +8,6 @@ spec:
   containers:
   - name: sleep
     image: alpine:latest
-    command: ["while :; do echo 'Hit CTRL+C'; sleep 1; done"]
-  restartPolicy: Never
+    command: ["/bin/sh"]
+    args: ["-c", "while true; do echo hello; sleep 10;done"]
+    restartPolicy: Never
