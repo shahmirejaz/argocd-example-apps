@@ -8,5 +8,5 @@ spec:
   containers:
   - name: sleep
     image: alpine:latest
-    command: ["sleep", "10"]
+    command: ["while :; do echo 'Hit CTRL+C'; sleep 1; done"]
   restartPolicy: Never
