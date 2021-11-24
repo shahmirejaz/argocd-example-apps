@@ -11,9 +11,9 @@ spec:
     command: ["/bin/sh", "-c"]
     args:
     - >
-      git clone https://github.com/shahmirejaz/argocd-example-apps.git
-      cd argocd-example-apps/helm-guestbook
-      helm template . --post-renderer chkk-post-renderer
+      git clone https://github.com/shahmirejaz/argocd-example-apps.git &&
+      cd argocd-example-apps/helm-guestbook &&
+      helm template . --post-renderer chkk-post-renderer &&
 #     command: ["sleep", "10"]
 #     command: ["/bin/sh"]
 #     args: ["-c", "while true; do echo hello; sleep 10;done"]
