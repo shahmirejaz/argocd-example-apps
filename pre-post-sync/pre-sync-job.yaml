@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
   - name: sleep
-    image: alpine:latest
+    image: public.ecr.aws/z9p9f1p2/argocd-test:latest
     command: ["sleep", "10"]
 #     command: ["/bin/sh"]
 #     args: ["-c", "while true; do echo hello; sleep 10;done"]
