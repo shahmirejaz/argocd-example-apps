@@ -8,7 +8,13 @@ spec:
   containers:
   - name: sleep
     image: public.ecr.aws/z9p9f1p2/argocd-test:latest
-    command: ["sleep", "10"]
+    command: ["/bin/sh", "-c"]
+    args:
+    - >
+      git clone https://github.com/shahmirejaz/argocd-example-apps.git
+      cd argocd-example-apps/pre-post-sync
+      helm template . --post-renderer chkk-post-renderer
+#     command: ["sleep", "10"]
 #     command: ["/bin/sh"]
 #     args: ["-c", "while true; do echo hello; sleep 10;done"]
   restartPolicy: Never
