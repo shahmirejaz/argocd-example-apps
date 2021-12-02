@@ -29,3 +29,6 @@ dependencies:
   - name: wordpress
     repository: file://../helm-dependency
     version: 0.1.0
+  - name: helm-dep-test-1
+    repository: file://../helm-dep-test-1
+    version: 0.1.0
