@@ -3,12 +3,12 @@ kind: Deployment
 metadata:
   name: test-dep-1
 spec:
+  selector:
+    matchLabels:
+      app: helm-guestbook
+      release: guestbook-helm-dep
   template:
     spec:
-      selector:
-        matchLabels:
-          app: {{ template "helm-guestbook.name" . }}
-          release: test-dep-
       containers:
         - name: test-image
           image: gcr.io/heptio-images/ks-guestbook-demo
