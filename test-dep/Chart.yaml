@@ -26,3 +26,6 @@ dependencies:
   - name: helm-guestbook
     repository: file://../helm-guestbook
     version: 0.1.0
+  - name: wordpress
+    repository: file://../helm-dependency
+    version: 0.1.0
