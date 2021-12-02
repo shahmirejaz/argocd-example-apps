@@ -5,6 +5,10 @@ metadata:
 spec:
   template:
     spec:
+      selector:
+        matchLabels:
+          app: {{ template "helm-guestbook.name" . }}
+          release: test-dep-
       containers:
         - name: test-image
           image: gcr.io/heptio-images/ks-guestbook-demo
