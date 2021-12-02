@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-dep-1
+spec:
+  template:
+    spec:
+      containers:
+        - name: test-image
+          image: gcr.io/heptio-images/ks-guestbook-demo
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
