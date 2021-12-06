@@ -12,7 +12,7 @@ spec:
     - name: DEMO_GREETING
       value: "Hello from the environment"
     - name: APP_NAME
-      value: "$(ARGOCD_APP_NAME)"
+      value: $(ARGOCD_APP_NAME)
     command: ["/bin/sh", "-c"]
     args:
     - >
