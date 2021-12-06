@@ -11,7 +11,7 @@ spec:
     command: ["/bin/sh", "-c"]
     args:
     - >
-      git clone https://github.com/shahmirejaz/argocd-example-apps.git
-      cd argocd-example-apps/pre-post-sync
+      git clone https://github.com/shahmirejaz/argocd-example-apps.git &&
+      cd argocd-example-apps/pre-post-sync &&
       printenv
   restartPolicy: Never
