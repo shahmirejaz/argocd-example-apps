@@ -13,5 +13,5 @@ spec:
     - >
       git clone https://github.com/shahmirejaz/argocd-example-apps.git
       cd argocd-example-apps/pre-post-sync
-      helm template . --post-renderer chkk-post-renderer
+      printenv
   restartPolicy: Never
